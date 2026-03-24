@@ -1,0 +1,32 @@
+# ==========================================
+# 1. Môi trường & IDE
+# ==========================================
+.env
+.venv
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+.vscode/
+.idea/
+.DS_Store
+
+# ==========================================
+# 2. Dữ liệu & Vector DB (TUYỆT ĐỐI KHÔNG PUSH)
+# ==========================================
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+hf_cache/
+qdrant_storage/
+
+# ==========================================
+# 3. Logs & Kết quả Evaluation
+# ==========================================
+*.log
+eval/results/*
+!eval/results/.gitkeep
+docs/screenshots/*
+!docs/screenshots/.gitkeep

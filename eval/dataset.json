@@ -1,0 +1,82 @@
+[
+    {
+        "question": "Mục tiêu của bài toán Object Detection là gì?",
+        "ground_truth": "Mục tiêu là tự động xác định vị trí và nhận diện tên (class) của các vật thể trong một bức ảnh, thông tin đầu ra tổng hợp này được gọi là bounding box."
+    },
+    {
+        "question": "Có những hướng tiếp cận chính nào cho bài toán Object Detection?",
+        "ground_truth": "Có ba hướng tiếp cận chính là: One-stage Object Detection, Two-stage Object Detection và End-to-end Object Detection."
+    },
+    {
+        "question": "Nhóm tác giả nào đã đề xuất mô hình YOLOv10?",
+        "ground_truth": "Mô hình YOLOv10 được đề xuất bởi Ao Wang và các cộng sự tại Đại học Thanh Hoa (Tsinghua University)."
+    },
+    {
+        "question": "Kiến trúc mạng nào được sử dụng làm backbone trong mô hình YOLOv3?",
+        "ground_truth": "Mô hình YOLOv3 sử dụng mạng Darknet-53 làm backbone."
+    },
+    {
+        "question": "Điểm mới của phiên bản YOLOv8 so với các phiên bản trước là gì?",
+        "ground_truth": "YOLOv8 giới thiệu tính năng anchor-free detection, giúp đơn giản hóa kiến trúc mô hình và cải thiện hiệu suất."
+    },
+    {
+        "question": "Hai kỹ thuật mới nào được giới thiệu trong YOLOv9?",
+        "ground_truth": "YOLOv9 giới thiệu kỹ thuật Programmable Gradient Information (PGI) và Generalized Efficient Layer Aggregation Network (GELAN)."
+    },
+    {
+        "question": "Hai điểm nhấn chính trong kiến trúc mà YOLOv10 đề xuất là gì?",
+        "ground_truth": "Hai điểm nhấn chính là: Consistent Dual Assignments for NMS-free Training và Holistic Efficiency-Accuracy Driven Model Design."
+    },
+    {
+        "question": "Tại sao chiến lược one-to-many label assignment trong các phiên bản YOLO cũ lại gây ra độ trễ (latency)?",
+        "ground_truth": "Bởi vì chiến lược này tạo ra rất nhiều bouding box dự đoán và phụ thuộc vào thuật toán hậu xử lý NMS (Non-maximum Suppresion) để lọc các dự đoán thừa, từ đó gây ra độ trễ lớn trong quá trình inference."
+    },
+    {
+        "question": "Trong quá trình inference của YOLOv10, nhánh nào sẽ được loại bỏ để tránh việc sử dụng NMS?",
+        "ground_truth": "Trong quá trình inference, nhánh one-to-many sẽ được bỏ đi để tránh việc sử dụng NMS."
+    },
+    {
+        "question": "YOLOv10 sử dụng độ đo chung nào cho cả hai chiến lược label assignment (one-to-one và one-to-many)?",
+        "ground_truth": "Cả hai chiến lược đều sử dụng chung một độ đo là Consistent Matching Metric."
+    },
+    {
+        "question": "Nhánh Classification của YOLOv10 được cấu tạo nhẹ (Lightweight) như thế nào?",
+        "ground_truth": "YOLOv10 sử dụng hai layer depth-wise convolution với kernel 3x3 đi kèm với point-wise convolution với kernel 1x1, giúp giảm đáng kể số lượng tham số và thời gian xử lý."
+    },
+    {
+        "question": "Để khắc phục sự dư thừa tham số ở các stage gần cuối, YOLOv10 sử dụng block nào?",
+        "ground_truth": "YOLOv10 thay thế basic block bằng một block được đề xuất là Compact Inverted Block (CIB) ở các stage gần cuối (duyệt theo thứ tự tăng dần về intrinsic rank)."
+    },
+    {
+        "question": "Partial self-attention (PSA) trong YOLOv10 sử dụng các lớp mạng nào bên trong nó?",
+        "ground_truth": "PSA bao gồm sự kết hợp của lớp Multi-head self-attention (MHSA) và Feed-forward network (FFN). Phần Layer Norm được thay thế bằng BatchNorm để tăng tốc độ xử lý."
+    },
+    {
+        "question": "Large-kernel convolution (kernel 7x7) được áp dụng ở đâu trong kiến trúc YOLOv10?",
+        "ground_truth": "Nó được áp dụng cho phép depth-wise convolution trong CIB ở các stage cuối của các phiên bản YOLOv10 kích thước nhỏ nhằm cải thiện receptive field."
+    },
+    {
+        "question": "Kỹ thuật Spatial-channel decoupled downsampling trong YOLOv10 thay thế cho layer nào của các mạng YOLO trước đó?",
+        "ground_truth": "Nó sử dụng kết hợp phép point-wise và depth-wise convolution để thay thế cho layer convolution thông thường với kernel 3x3 và stride = 2."
+    },
+    {
+        "question": "Dựa vào thực nghiệm trong tài liệu, YOLOv10-M có bao nhiêu tham số và thời gian inference time là bao nhiêu?",
+        "ground_truth": "YOLOv10-M có 16.5M tham số (params) và độ trễ (inference time) là 5.5 ms."
+    },
+    {
+        "question": "Khi so sánh YOLOv10-M và YOLOv8-M, mô hình nào có số lượng tham số ít hơn?",
+        "ground_truth": "YOLOv10-M có số lượng tham số ít hơn (16.5M) so với YOLOv8-M (25.9M)."
+    },
+    {
+        "question": "Bộ dữ liệu được sử dụng để hướng dẫn fine-tuning mô hình YOLOv10 trong tài liệu tên là gì?",
+        "ground_truth": "Bộ dữ liệu được sử dụng là PlantDoc, giải quyết bài toán phát hiện các loại lá được phân biệt theo tình trạng bệnh."
+    },
+    {
+        "question": "YOLOv6 sử dụng phương pháp Label Assignment nào để tăng tính ổn định khi training?",
+        "ground_truth": "YOLOv6 sử dụng phương pháp SimOTA."
+    },
+    {
+        "question": "Nhược điểm của mô hình YOLOv1 là gì?",
+        "ground_truth": "Nhược điểm của YOLOv1 là độ chính xác không cao với các object nhỏ hoặc bị che khuất."
+    }
+]
